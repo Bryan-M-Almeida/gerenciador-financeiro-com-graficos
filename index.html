@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Gerenciador financeiro</title>
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/10384/10384161.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header>
         <nav>
-            <a href="#inicio">Início</a>
+            <a href="#">Início</a>
             <a href="#renda">Renda</a>
             <a href="#metas">Metas</a>
             <a href="#gastos">Gastos</a>
@@ -23,19 +24,19 @@
     <!-- início -->
     <section id="inicio">
         <div class="inicio-container">
-            <h1 style="font-size: 3em; color: #4caf50; margin-bottom: 20px;">Controle sua Renda de Forma Inteligente
+            <h1>Controle sua Renda de Forma Inteligente
             </h1>
-            <p style="font-size: 1.2em; color: #ccc; line-height: 1.6;">
+            <p>
                 Este site foi criado para te ajudar a visualizar melhor suas finanças. Aqui você vai:
             </p>
-            <ul style="text-align: left; color: #aaa; font-size: 1.1em; margin-top: 20px; line-height: 1.6;">
+            <ul>
                 <li>📝 Registrar sua <strong>renda mensal</strong>, <strong>metas financeiras</strong> e
                     <strong>gastos</strong> diários
                 </li>
                 <li>📊 Gerar <strong>gráficos interativos</strong> que mostram seu progresso</li>
                 <li>🚀 Acompanhar sua evolução e tomar decisões com base em dados reais</li>
             </ul>
-            <p style="margin-top: 30px; font-size: 1.1em; color: #bbb;">
+            <p>
                 Comece agora! Preencha os campos nas seções abaixo e visualize seu desempenho financeiro com clareza.
             </p>
         </div>
@@ -44,44 +45,100 @@
 
     <!-- Renda -->
     <section id="renda">
+        <div class="container">
+            <h1>Informe sua Renda Mensal</h1>
+            <p class="descricao">
+                Digite abaixo o valor total que você recebe por mês. Isso será usado para gerar relatórios e gráficos
+                sobre suas finanças.
+            </p>
 
+            <form id="rendaForm">
+                <input type="number" name="renda" required class="rendaInput" placeholder="Ex: 3500" min="0">
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
     </section>
+
 
     <!-- metas -->
     <section id="metas">
+        <div class="container">
+            <h1>Adicione Suas Metas Financeiras</h1>
+            <p class="descricao">
+                Estabeleça objetivos claros para alcançar sua liberdade financeira. Pode ser juntar dinheiro, quitar
+                dívidas, comprar algo ou investir.
+            </p>
 
+            <form id="metaForm">
+                <input type="text" name="meta" required class="metaInput"
+                    placeholder="Ex: Juntar R$ 5.000 para investir">
+                <button type="submit">Adicionar Meta</button>
+            </form>
+
+            <ul id="listaMetas" class="lista-metas">
+                <!-- Metas adicionadas aparecem aqui -->
+            </ul>
+        </div>
     </section>
+
 
     <!-- gastos -->
     <section id="gastos">
+        <div class="container">
+            <h1>Registre Seus Gastos</h1>
+            <p class="descricao">
+                Anote cada gasto que tiver, mesmo os pequenos. Isso vai te dar clareza sobre onde seu dinheiro está indo
+                e vai te ajudar a gastar com mais consciência.
+            </p>
 
+            <form id="gastoForm">
+                <input type="text" name="descricaoGasto" required class="gastoInput descricaoGastosInput"
+                    placeholder="Descrição (Ex: Uber, Lanche)">
+                <input type="number" name="valorGasto" required class="gastoInput valorGastosInput"
+                    placeholder="Valor (Ex: 25.90)" min="0" step="0.01">
+                <button type="submit">Adicionar Gasto</button>
+            </form>
+
+            <ul id="listaGastos" class="lista-gastos">
+                <!-- Gastos inseridos aparecerão aqui -->
+            </ul>
+        </div>
     </section>
+
 
     <!-- gráficos -->
     <section id="graficos">
+        <div class="container">
+            <h1>Visualize Seus Dados Financeiros</h1>
+            <p class="descricao">
+                Veja seus rendimentos, metas e gastos de forma clara e visual. Os gráficos abaixo mostram para onde seu
+                dinheiro está indo e como você está progredindo.
+            </p>
 
+            <canvas id="graficoFinanceiro"></canvas>
+        </div>
     </section>
+
 
     <!-- sobre -->
     <section id="sobre">
-        <div style="max-width: 800px; margin: auto; padding: 50px 20px; text-align: center;">
-            <h2 style="font-size: 2.5em; color: #4caf50; margin-bottom: 20px;">Sobre o Projeto</h2>
-            <p style="font-size: 1.1em; color: #ccc; line-height: 1.6;">
+        <div class="sobre-container">
+            <h2>Sobre o Projeto</h2>
+            <p>
                 Este site foi desenvolvido com o objetivo de simplificar o controle financeiro pessoal. A proposta é
                 oferecer uma plataforma leve e funcional onde qualquer pessoa consiga visualizar seus ganhos, metas e
                 gastos por meio de gráficos e relatórios simples.
             </p>
 
-            <p style="font-size: 1.1em; color: #bbb; margin-top: 20px;">
+            <p>
                 Código aberto, feito com JavaScript, CSS e HTML com foco em produtividade.
             </p>
 
-            <div style="margin-top: 30px;">
-                <a href="https://github.com/seuusuario" target="_blank"
-                    style="display: inline-flex; align-items: center; gap: 10px; color: #4caf50; text-decoration: none; font-size: 1.2em;">
+            <div class="dev">
+                <a href="https://github.com/Bryan-M-Almeida" target="_blank" class="git">
                     <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" width="24"
                         height="24" />
-                    Feito por @seuusuario
+                    Feito por @Bryan-M-Almeida
                 </a>
             </div>
         </div>

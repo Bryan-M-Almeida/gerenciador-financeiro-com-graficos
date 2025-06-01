@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
@@ -16,7 +16,6 @@ body {
     padding: 20px;
 }
 
-/* Botão estiloso */
 button {
     background-color: #1a1a1a;
     border: 1px solid #4caf50;
@@ -24,13 +23,13 @@ button {
     padding: 12px 20px;
     border-radius: 8px;
     font-weight: bold;
-    box-shadow: 0 0 10px #4caf50;
+    box-shadow: 0 0 5px #4caf50;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
 }
 
 button:hover {
-    background-color: #4caf50;
+    background-color: #347a36;
     color: black;
 }
 
@@ -38,7 +37,19 @@ button:active {
     box-shadow: inset 2px 2px 5px #2e7d32;
 }
 
-/* Navbar elegante */
+button[type="submit"] {
+    background-color: #4caf50;
+    color: black;
+    border: none;
+    width: 150px;
+    transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #66bb6a;
+}
+
+/* NAVBAR */
 nav {
     position: fixed;
     width: 95vw;
@@ -50,7 +61,7 @@ nav {
     box-shadow: 0 3px 10px #000;
 }
 
-/* Links do menu */
+/* LINKS */
 a {
     font-size: 1.7em;
     color: #4caf50;
@@ -65,13 +76,216 @@ a:hover {
     text-decoration: underline 3px;
 }
 
-.inicio-container {
+/* TEXTOS GERAIS */
+h1,
+h2 {
+    font-size: 2.5em;
+    color: #4caf50;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+ul {
+    text-align: left;
+    color: #aaa;
+    font-size: 1.1em;
+    margin-top: 20px;
+    line-height: 1.6;
+}
+
+/* SECTIONS */
+section {
+    margin: 10% 0 5%;
+}
+
+/* CONTAINERS */
+.inicio-container,
+.sobre-container,
+#renda .container,
+#metas .container,
+#gastos .container,
+#graficos .container {
     max-width: 800px;
     margin: auto;
     padding: 50px 20px;
-    border: 1px solid green;
-    margin-top: 5%;
+}
+
+.inicio-container {
+    border: 3px solid green;
     padding: 3%;
     border-radius: 10px;
-    margin-bottom: 5%;
+}
+
+#renda,
+#metas,
+#gastos,
+#graficos {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#renda {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+#metas {
+    background-color: #0d0d0d;
+    color: #e0e0e0;
+}
+
+#gastos {
+    background-color: #1a1a1a;
+    color: #f5f5f5;
+}
+
+#graficos {
+    background-color: #111;
+    color: #fff;
+}
+
+/* DESCRIÇÕES */
+#renda .descricao,
+#metas .descricao,
+#gastos .descricao,
+#graficos .descricao {
+    font-size: 1.1em;
+    color: #aaa;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+#metas .descricao {
+    color: #bbb;
+}
+
+#gastos .descricao {
+    color: #ccc;
+}
+
+/* TÍTULOS PERSONALIZADOS */
+#renda h1 {
+    color: #4caf50;
+}
+
+#metas h1 {
+    color: #ffd700;
+}
+
+#gastos h1 {
+    color: #e53935;
+}
+
+#graficos h1 {
+    color: #00bcd4;
+}
+
+/* FORMS */
+#rendaForm,
+#metaForm,
+#gastoForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+/* INPUTS */
+.rendaInput,
+.metaInput,
+.gastoInput {
+    padding: 12px 20px;
+    font-size: 1em;
+    border-radius: 8px;
+    background-color: #1e1e1e;
+    color: white;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    border: 1px solid;
+}
+
+.rendaInput {
+    border-color: #4caf50;
+    max-width: 300px;
+}
+
+.metaInput {
+    border-color: #ffd700;
+}
+
+.gastoInput {
+    background-color: #2a2a2a;
+    border-color: #e53935;
+}
+
+.rendaInput::placeholder,
+.metaInput::placeholder,
+.gastoInput::placeholder {
+    color: #777;
+}
+
+.metaInput::placeholder,
+.gastoInput::placeholder {
+    color: #888;
+}
+
+/* LISTAS */
+.lista-metas,
+.lista-gastos {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.lista-metas li {
+    background-color: #1a1a1a;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-left: 4px solid #ffd700;
+    border-radius: 5px;
+    color: #ddd;
+}
+
+.lista-gastos li {
+    background-color: #2e2e2e;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-left: 4px solid #e53935;
+    border-radius: 5px;
+    color: #eee;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* GRÁFICO */
+canvas#graficoFinanceiro {
+    background-color: #1c1c1c;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 188, 212, 0.3);
+    width: 100%;
+    max-width: 100%;
+    height: 400px;
+}
+
+/* OUTROS */
+.dev {
+    margin-top: 10px;
+}
+
+.git {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #4caf50;
+    text-decoration: none;
+    font-size: 1.2em;
 }
