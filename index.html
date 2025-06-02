@@ -4,136 +4,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gerenciador financeiro</title>
+    <title>Gerenciador Financeiro</title>
+
+    <!-- Ícone do site -->
     <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/10384/10384161.png" type="image/x-icon">
+
+    <!-- Estilo CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Biblioteca Chart.js para gráficos -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
+
+    <!-- NAVBAR / MENU LATERAL -->
     <header>
-        <nav>
-            <a href="#">Início</a>
-            <a href="#renda">Renda</a>
-            <a href="#metas">Metas</a>
-            <a href="#gastos">Gastos</a>
-            <a href="#graficos">Gráficos</a>
-            <a href="#sobre">sobre</a>
+        <nav id="menu" class="beforeNav">
+            <img src="https://cdn-icons-png.flaticon.com/512/7216/7216128.png" id="navIco" alt="Ícone Menu">
+            <div class="itemContainer beforeItem" id="itemContainer">
+                <a href="#">Início</a>
+                <a href="#renda">Renda</a>
+                <a href="#metas">Metas</a>
+                <a href="#gastos">Gastos</a>
+                <a href="#graficos">Gráficos</a>
+                <a href="#sobre">Sobre</a>
+            </div>
         </nav>
+        
     </header>
 
-    <!-- início -->
-    <section id="inicio">
-        <div class="inicio-container">
-            <h1>Controle sua Renda de Forma Inteligente
-            </h1>
-            <p>
-                Este site foi criado para te ajudar a visualizar melhor suas finanças. Aqui você vai:
-            </p>
-            <ul>
-                <li>📝 Registrar sua <strong>renda mensal</strong>, <strong>metas financeiras</strong> e
-                    <strong>gastos</strong> diários
-                </li>
-                <li>📊 Gerar <strong>gráficos interativos</strong> que mostram seu progresso</li>
-                <li>🚀 Acompanhar sua evolução e tomar decisões com base em dados reais</li>
-            </ul>
-            <p>
-                Comece agora! Preencha os campos nas seções abaixo e visualize seu desempenho financeiro com clareza.
-            </p>
-        </div>
-    </section>
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main>
 
+        <!-- INÍCIO -->
+        <section id="inicio">
+            <div class="inicio-container">
+                <h1>Controle sua Renda de Forma Inteligente</h1>
+                <p>Este site foi criado para te ajudar a visualizar melhor suas finanças. Aqui você vai:</p>
+                <ul>
+                    <li>📝 Registrar sua <strong>renda mensal</strong>, <strong>metas financeiras</strong> e
+                        <strong>gastos</strong> diários</li>
+                    <li>📊 Gerar <strong>gráficos interativos</strong> que mostram seu progresso</li>
+                    <li>🚀 Acompanhar sua evolução e tomar decisões com base em dados reais</li>
+                </ul>
+                <p>Comece agora! Preencha os campos nas seções abaixo e visualize seu desempenho financeiro com clareza.
+                </p>
+            </div>
+        </section>
 
-    <!-- Renda -->
-    <section id="renda">
-        <div class="container">
-            <h1>Informe sua Renda Mensal</h1>
-            <p class="descricao">
-                Digite abaixo o valor total que você recebe por mês. Isso será usado para gerar relatórios e gráficos
-                sobre suas finanças.
-            </p>
+        <!-- RENDA MENSAL -->
+        <section id="renda">
+            <div class="container">
+                <h1>Informe sua Renda Mensal</h1>
+                <p class="descricao">Digite abaixo o valor total que você recebe por mês. Isso será usado para gerar
+                    relatórios e gráficos sobre suas finanças.</p>
+                <form id="rendaForm">
+                    <input type="number" name="renda" required class="rendaInput" placeholder="Ex: 3500" min="0">
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </section>
 
-            <form id="rendaForm">
-                <input type="number" name="renda" required class="rendaInput" placeholder="Ex: 3500" min="0">
-                <button type="submit">Enviar</button>
-            </form>
-        </div>
-    </section>
+        <!-- ENTRADAS EXTRAS -->
+        <section id="extras">
+            <div class="container">
+                <h1>Adicione as Entradas Extras</h1>
+                <p class="descricao">Digite abaixo os valores extras que você receber. Isso será usado para gerar
+                    relatórios e gráficos.</p>
+                <form id="extraForm">
+                    <input type="text" name="descricaoExtra" required class="extraInput descricaoExtraInput"
+                        placeholder="Descrição (Ex: Freelance, etc)">
+                    <input type="number" name="extra" required class="extraInput valorExtraInput" placeholder="Ex: 3500"
+                        min="0">
+                    <button type="submit">Enviar</button>
+                </form>
+                <ul id="listaExtras" class="lista-extras">
+                    <!-- Itens extras adicionados aqui -->
+                </ul>
+            </div>
+        </section>
 
+        <!-- METAS -->
+        <section id="metas">
+            <div class="container">
+                <h1>Adicione Suas Metas Financeiras</h1>
+                <p class="descricao">Estabeleça objetivos claros para alcançar sua liberdade financeira. Pode ser juntar
+                    dinheiro, quitar dívidas, comprar algo ou investir.</p>
+                <form id="metaForm">
+                    <input type="text" name="meta" required class="metaInput"
+                        placeholder="Ex: Juntar R$ 5.000 para investir">
+                    <button type="submit">Adicionar Meta</button>
+                </form>
+                <ul id="listaMetas" class="lista-metas">
+                    <!-- Metas adicionadas aqui -->
+                </ul>
+            </div>
+        </section>
 
-    <!-- metas -->
-    <section id="metas">
-        <div class="container">
-            <h1>Adicione Suas Metas Financeiras</h1>
-            <p class="descricao">
-                Estabeleça objetivos claros para alcançar sua liberdade financeira. Pode ser juntar dinheiro, quitar
-                dívidas, comprar algo ou investir.
-            </p>
+        <!-- GASTOS -->
+        <section id="gastos">
+            <div class="container">
+                <h1>Registre Seus Gastos</h1>
+                <p class="descricao">Anote cada gasto que tiver, mesmo os pequenos. Isso vai te dar clareza sobre onde
+                    seu dinheiro está indo e vai te ajudar a gastar com mais consciência.</p>
+                <form id="gastoForm">
+                    <input type="text" name="descricaoGasto" required class="gastoInput descricaoGastosInput"
+                        placeholder="Descrição (Ex: Uber, Lanche)">
+                    <input type="number" name="valorGasto" required class="gastoInput valorGastosInput"
+                        placeholder="Valor (Ex: 25.90)" min="0" step="0.01">
+                    <button type="submit">Adicionar Gasto</button>
+                </form>
+                <ul id="listaGastos" class="lista-gastos">
+                    <!-- Gastos adicionados aqui -->
+                </ul>
+            </div>
+        </section>
 
-            <form id="metaForm">
-                <input type="text" name="meta" required class="metaInput"
-                    placeholder="Ex: Juntar R$ 5.000 para investir">
-                <button type="submit">Adicionar Meta</button>
-            </form>
+        <!-- GRÁFICOS -->
+        <section id="graficos">
+            <div class="container">
+                <h1>Visualize Seus Dados Financeiros</h1>
+                <p class="descricao">Veja seus rendimentos, metas e gastos de forma clara e visual. Os gráficos abaixo
+                    mostram para onde seu dinheiro está indo e como você está progredindo.</p>
+                <canvas id="graficoFinanceiro"></canvas>
+            </div>
+            <button onclick="resetarTudo()">🗑️ Apagar Tudo</button>
 
-            <ul id="listaMetas" class="lista-metas">
-                <!-- Metas adicionadas aparecem aqui -->
-            </ul>
-        </div>
-    </section>
+        </section>
 
+    </main>
 
-    <!-- gastos -->
-    <section id="gastos">
-        <div class="container">
-            <h1>Registre Seus Gastos</h1>
-            <p class="descricao">
-                Anote cada gasto que tiver, mesmo os pequenos. Isso vai te dar clareza sobre onde seu dinheiro está indo
-                e vai te ajudar a gastar com mais consciência.
-            </p>
-
-            <form id="gastoForm">
-                <input type="text" name="descricaoGasto" required class="gastoInput descricaoGastosInput"
-                    placeholder="Descrição (Ex: Uber, Lanche)">
-                <input type="number" name="valorGasto" required class="gastoInput valorGastosInput"
-                    placeholder="Valor (Ex: 25.90)" min="0" step="0.01">
-                <button type="submit">Adicionar Gasto</button>
-            </form>
-
-            <ul id="listaGastos" class="lista-gastos">
-                <!-- Gastos inseridos aparecerão aqui -->
-            </ul>
-        </div>
-    </section>
-
-
-    <!-- gráficos -->
-    <section id="graficos">
-        <div class="container">
-            <h1>Visualize Seus Dados Financeiros</h1>
-            <p class="descricao">
-                Veja seus rendimentos, metas e gastos de forma clara e visual. Os gráficos abaixo mostram para onde seu
-                dinheiro está indo e como você está progredindo.
-            </p>
-
-            <canvas id="graficoFinanceiro"></canvas>
-        </div>
-    </section>
-
-
-    <!-- sobre -->
-    <section id="sobre">
+    <!-- RODAPÉ / SOBRE -->
+    <footer id="sobre">
         <div class="sobre-container">
             <h2>Sobre o Projeto</h2>
-            <p>
-                Este site foi desenvolvido com o objetivo de simplificar o controle financeiro pessoal. A proposta é
+            <p>Este site foi desenvolvido com o objetivo de simplificar o controle financeiro pessoal. A proposta é
                 oferecer uma plataforma leve e funcional onde qualquer pessoa consiga visualizar seus ganhos, metas e
-                gastos por meio de gráficos e relatórios simples.
-            </p>
-
-            <p>
-                Código aberto, feito com JavaScript, CSS e HTML com foco em produtividade.
-            </p>
-
+                gastos por meio de gráficos e relatórios simples.</p>
+            <p>Código aberto, feito com JavaScript, CSS e HTML com foco em produtividade.</p>
             <div class="dev">
                 <a href="https://github.com/Bryan-M-Almeida" target="_blank" class="git">
                     <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" width="24"
@@ -142,9 +151,9 @@
                 </a>
             </div>
         </div>
-    </section>
+    </footer>
 
-
+    <!-- Script JavaScript principal -->
     <script src="script.js"></script>
 </body>
 
