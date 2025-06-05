@@ -49,13 +49,13 @@ Fotos:
 ![menu](https://github.com/user-attachments/assets/ad4a4e51-a57d-401f-92dd-faceeaea4157)
 
 ## 📂 Como Usar
-
+ ```bash
 Clone o repositório:
-   ```bash
+  
    git clone https://github.com/seu-usuario/finance-tracker.git
    Abra o index.html no navegador.
-
 — os dados são salvos no seu navegador (sem back-end).
+```
 
 📌 Próximas atualizações
 
