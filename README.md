@@ -79,7 +79,7 @@ Pessoas que querem controlar o próprio dinheiro de forma simples
 
 👤 Autor
 
-Feito por Bryan, desenvolvedor em formação, com um pé no back-end e a mente focada no front.
+Feito por Bryan, desenvolvedor em formação.
 
 📜 Licença
 
