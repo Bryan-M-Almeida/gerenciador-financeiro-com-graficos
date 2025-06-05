@@ -50,12 +50,13 @@ Fotos:
 
 ## 📂 Como Usar
 
-1. Clone o repositório:
+Clone o repositório:
    ```bash
    git clone https://github.com/seu-usuario/finance-tracker.git
    Abra o index.html no navegador.
 
 — os dados são salvos no seu navegador (sem back-end).
+
 📌 Próximas atualizações
 
  Adicionar filtros por mês
