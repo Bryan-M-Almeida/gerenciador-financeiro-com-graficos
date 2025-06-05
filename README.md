@@ -1,6 +1,7 @@
 # 💸 Gerenciador de Finanças Pessoais
 
-Projeto completo para controle de **renda, gastos e metas financeiras**, com gráficos visuais e interface responsiva. Ideal para quem quer entender onde o dinheiro vai e planejar melhor o mês.
+Projeto completo para controle de **renda, gastos e metas financeiras**, com gráficos visuais e interface responsiva. 
+Ideal para quem quer entender onde o dinheiro vai e planejar melhor o mês.
 
 ---
 
@@ -49,6 +50,7 @@ Fotos:
 ![menu](https://github.com/user-attachments/assets/ad4a4e51-a57d-401f-92dd-faceeaea4157)
 
 ## 📂 Como Usar
+
  ```bash
 Clone o repositório:
   
@@ -68,6 +70,7 @@ Clone o repositório:
  Dark Mode
 
 🧠 Ideal para:
+
 Estudantes de Front-End
 
 Quem quer treinar JavaScript
@@ -75,7 +78,9 @@ Quem quer treinar JavaScript
 Pessoas que querem controlar o próprio dinheiro de forma simples
 
 👤 Autor
+
 Feito por Bryan, desenvolvedor em formação, com um pé no back-end e a mente focada no front.
 
 📜 Licença
+
 Este projeto está sob a licença MIT — sinta-se livre para usar, modificar e distribuir.
