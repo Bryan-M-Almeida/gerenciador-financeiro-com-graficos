@@ -59,7 +59,7 @@ Clone o repositório:
 — os dados são salvos no seu navegador (sem back-end).
 ```
 
-📌 Próximas atualizações
+## 📌 Próximas atualizações
 
  Adicionar filtros por mês
 
@@ -69,7 +69,7 @@ Clone o repositório:
 
  Dark Mode
 
-🧠 Ideal para:
+## 🧠 Ideal para:
 
 Estudantes de Front-End
 
@@ -77,10 +77,10 @@ Quem quer treinar JavaScript
 
 Pessoas que querem controlar o próprio dinheiro de forma simples
 
-👤 Autor
+## 👤 Autor
 
 Feito por Bryan, desenvolvedor em formação.
 
-📜 Licença
+## 📜 Licença
 
 Este projeto está sob a licença MIT — sinta-se livre para usar, modificar e distribuir.
