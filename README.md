@@ -49,6 +49,8 @@ Fotos:
 
 ![menu](https://github.com/user-attachments/assets/ad4a4e51-a57d-401f-92dd-faceeaea4157)
 
+---
+
 ## 📂 Como Usar
 
  ```bash
@@ -58,24 +60,28 @@ Clone o repositório:
    Abra o index.html no navegador.
 — os dados são salvos no seu navegador (sem back-end).
 ```
+---
 
 ## 📌 Próximas atualizações
 
- Adicionar filtros por mês
+ - Adicionar filtros por mês
 
- Exportar dados
+- Exportar dados
 
- Implementar autenticação simples
+- Implementar autenticação simples
 
- Dark Mode
+- Dark Mode
+ 
+ ---
+ 
 
 ## 🧠 Ideal para:
 
-Estudantes de Front-End
+- Estudantes de Front-End
 
-Quem quer treinar JavaScript
+- Quem quer treinar JavaScript
 
-Pessoas que querem controlar o próprio dinheiro de forma simples
+- Pessoas que querem controlar o próprio dinheiro de forma simples
 
 ## 👤 Autor
 
